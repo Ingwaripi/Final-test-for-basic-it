@@ -26,7 +26,7 @@ void PrintArray(string[] array)
 {
     if (array.Length == 0)
     {
-        Console.WriteLine("Array is empty");
+        Console.WriteLine("Пустой массив");
     }
     else
     {
@@ -34,3 +34,17 @@ void PrintArray(string[] array)
         Console.WriteLine();
     }
 }
+void PrintTask(string[] array)
+{
+    Console.WriteLine("Исходный массив:");
+    PrintArray(array);
+    string[] shortArray = GetShortWordsArray(array);
+    Console.WriteLine($"Результат массива (слов меньше или равно чем  {maxLehght} символов)");
+    PrintArray(shortArray);
+    Console.WriteLine();
+}
+
+PrintTask(arr1);
+PrintTask(arr2);
+PrintTask(arr3);
+
